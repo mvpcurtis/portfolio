@@ -1,9 +1,11 @@
 :root {
   --white-colour: #fff;
   --black-colour: #000;
+  --blue-colour: #39bad1;
   --background-colour: var(--white-colour);
   --font-colour: var(--black-colour);
   --font-size: 1rem;
+  --link-colour: var(--blue-colour);
 }
 
 * {
@@ -62,12 +64,17 @@ nav > #logo > span {
   font-size: 0.75rem;
 }
 
-nav > #top-nav {
+nav > #top-nav,
+footer > .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 1em;
+}
+
+nav ul li:last-child {
+  display: none;
 }
 
 nav ul li a:hover,
@@ -80,7 +87,7 @@ main,
 #my-work,
 #about-me,
 #contact-me footer {
-  padding: 2em 0;
+  padding: 1em 0;
   position: relative;
 }
 
@@ -97,25 +104,88 @@ main,
   align-items: center;
 }
 
-.card-title {
-  padding: 1em 0;
-  font-size: 1.4rem;
-}
-
-.card-description {
-  padding-bottom: 3em;
-}
-
 .cards .card img {
   display: block;
   width: 100%;
   height: 200px;
-  margin: 0 auto;
   border-radius: 0.75em;
+  margin-top: 3em;
 }
 
-.w-full {
+.cards .card:first-of-type img {
+  margin-top: 0;
+}
+
+.card-title {
+  padding-top: 1em;
+  font-size: 1.4rem;
+}
+
+.card-description {
+  padding-top: 2em;
+}
+
+#worked-with {
   width: 100%;
+  text-align: center;
+  margin-top: 2em;
+}
+
+#worked-with i {
+  font-size: 2rem;
+  color: var(--link-colour);
+  padding: 1em;
+}
+
+#contact-form > aside {
+  text-align: center;
+}
+
+label,
+input,
+textarea {
+  display: block;
+  width: 100%;
+}
+
+label {
+  margin-top: 1em;
+}
+
+input,
+textarea {
+  outline: none;
+  border-radius: 0.3em;
+  border: 1px solid var(--black-colour);
+  padding: 0.5em;
+}
+
+button.submit {
+  display: block;
+  width: 100%;
+  background-color: var(--font-colour);
+  color: var(--background-colour);
+  padding: 0.75em 1.25em;
+  border: none;
+  margin-top: 1em;
+  transition: all ease-in-out 0.1s;
+}
+
+button.submit:hover,
+button.submit:focus {
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 2em 0;
+}
+
+footer ul li a,
+footer ul li a:link,
+footer ul li a:visited {
+  color: var(--link-colour);
 }
 
 @media screen and (min-width: 600px) {
@@ -132,10 +202,14 @@ main,
   nav > #top-nav {
     flex-direction: row;
   }
-  nav ul li {
+  nav ul li,
+  footer ul li {
     display: inline-block;
     float: left;
     margin-left: 1em;
+  }
+  nav ul li:last-child {
+    display: inline-block;
   }
   .cards {
     flex-direction: row;
@@ -144,5 +218,36 @@ main,
     display: flex;
     flex-direction: column;
     padding: 0.5em;
+  }
+  .cards .card img {
+    margin-top: 0;
+  }
+  #about-me .cards {
+    justify-content: center;
+    align-items: center;
+  }
+  #about-me .card-description {
+    padding-left: 1.5em;
+  }
+  #contact-form > aside {
+    flex-grow: 1;
+  }
+  #contact-form > aside {
+    flex-grow: 1;
+    text-align: left;
+  }
+  #contact-form {
+    display: flex;
+  }
+  #contact-me aside {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer > .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }/*# sourceMappingURL=main.css.map */
