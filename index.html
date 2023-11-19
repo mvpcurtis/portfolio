@@ -7,6 +7,7 @@
 		<!-- PAGE TITLE -->
 		<title>Curtis Bowen | Portfolio</title>
 		<!-- STYLESHEETS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body>
@@ -27,7 +28,9 @@
 						<li><a href="#about-me">About Me</a></li>
 						<li><a href="#contact-me">Contact Me</a></li>
 						<!-- LIGHT/DARK MODE TOGGLE -->
-						<li><a href="#">Dark Mode</a></li>
+						<li>
+							<a href="#"><i class="fa-solid fa-moon" alt="Dark Mode"></i></a>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -41,11 +44,13 @@
 					<h2 class="section-title">My Work</h2>
 					<!-- CARDS -->
 					<section class="cards">
+						<!-- CARD -->
 						<article class="card">
 							<img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project Title" />
 							<h3 class="card-title">Project Title</h3>
 							<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsam eius dolores alias necessitatibus rem amet nesciunt exercitationem. Aut ut quibusdam voluptate dignissimos laboriosam sapiente aliquam aperiam? Qui quae, eaque temporibus maiores omnis recusandae ea tempora, quidem labore rem architecto.</p>
 						</article>
+						<!-- CARD -->
 						<article class="card">
 							<img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project Title" />
 							<h3 class="card-title">Project Title</h3>
@@ -53,11 +58,13 @@
 						</article>
 					</section>
 					<section class="cards">
+						<!-- CARD -->
 						<article class="card">
 							<img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project Title" />
 							<h3 class="card-title">Project Title</h3>
 							<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis ipsam eius dolores alias necessitatibus rem amet nesciunt exercitationem. Aut ut quibusdam voluptate dignissimos laboriosam sapiente aliquam aperiam? Qui quae, eaque temporibus maiores omnis recusandae ea tempora, quidem labore rem architecto.</p>
 						</article>
+						<!-- CARD -->
 						<article class="card">
 							<img src="https://images.pexels.com/photos/965345/pexels-photo-965345.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Project Title" />
 							<h3 class="card-title">Project Title</h3>
@@ -68,10 +75,37 @@
 				<!-- SECTION: ABOUT ME -->
 				<section id="about-me">
 					<h2 class="section-title">About Me</h2>
+					<section class="cards">
+						<img src="https://placeholder.co/200x200" alt="" />
+						<p class="card-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus autem consectetur sequi quis itaque pariatur eligendi hic, recusandae sunt ratione cupiditate quos rerum possimus quaerat magni, cum quae sit unde nesciunt veniam atque repudiandae veritatis eum. Accusamus sed iusto delectus!</p>
+					</section>
+					<article id="worked-with">
+						<i class="fa-brands fa-html5"></i>
+						<i class="fa-brands fa-css3-alt"></i>
+						<i class="fa-brands fa-sass"></i>
+						<i class="fa-brands fa-bootstrap"></i>
+					</article>
 				</section>
 				<!-- SECTION: CONTACT ME -->
 				<section id="contact-me">
 					<h2 class="section-title">Contact Me</h2>
+					<!-- ASIDE (FOR MESSAGE) -->
+					<div id="contact-form">
+						<aside>
+							<h3>Hey there!</h3>
+							<p>Please feel free to contact me.</p>
+						</aside>
+						<!-- CONTACT ME FORM -->
+						<form action="_POST">
+							<label for="name">Enter your name:</label>
+							<input type="text" name="name" id="name" placeholder="Severus Snape" />
+							<label for="email">Enter your email:</label>
+							<input type="email" name="email" id="email" placeholder="snape@hogwarts.com" />
+							<label for="message">How can I help?</label>
+							<textarea name="message" id="message" cols="30" rows="10" placeholder="Harry Potter is become a nuisance!"></textarea>
+							<button class="submit">Submit</button>
+						</form>
+					</div>
 				</section>
 			</div>
 		</main>
