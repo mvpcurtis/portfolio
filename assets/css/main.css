@@ -1,296 +1,335 @@
+/* IMPORTED FONTS */
+@import url("https://use.typekit.net/dxf2ltb.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+/* END FONTS */
 /* VARIABLES */
 :root {
-	/* COLOUR VARIABLES */
-	--white-colour: #fff;
-	--black-colour: #000;
-	--blue-colour: #39bad1;
-	/* PROPERTITY VARIABLES */
-	--background-colour: var(--white-colour);
-	--font-colour: var(--black-colour);
-	--font-size: 1rem;
-	--link-colour: var(--blue-colour);
+    --white-colour: #ffffff;
+    --black-colour: #000000;
+    --grey-colour: #171717;
+    --blue-colour: #69b6da;
+    --red-colour: #bc4749;
+    --yellow-colour: #e9c46a;
+    --background-colour: var(--white-colour);
+    --font-colour: var(--black-colour);
+    --anchor-colour: var(--blue-colour);
+    --regular-font: "Open Sans", sans-serif;
+    --headline-font: "bely-display", sans-serif;
 }
 /* END VARIABLES */
 /* RESET */
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
-a,
-a:link,
-a:visited {
-	color: var(--font-colour);
-	text-decoration: none;
+ol, ul {
+    list-style-type: none;
 }
 
-ul {
-	list-style-type: none;
+a, a:link, a:visited {
+    color: var(--anchor-colour);
+    text-decoration: none;
+}
+
+a, a:hover, a:focus {
+    text-decoration: underline;
 }
 /* END RESET */
-/* GENERAL STYLING */
+/* MOBILE VIEW */
+/* GENERAL STYLES */
 body {
-	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-	font-size: var(--font-size);
-	font-weight: normal;
-	line-height: 1.6;
-	background-color: var(--background-colour);
-	color: var(--font-colour);
-	text-rendering: optimizeLegibility;
+    font-family: var(--regular-font);
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    background-color: var(--grey-colour);
+    color: var(--font-colour);
+    text-rendering: optimizeLegibility;
 }
 
-.container {
-	margin: 0 auto;
-	padding: 0 1.5em;
+h1, h2 {
+    font-family: var(--headline-font);
+}
+
+section h2 {
+    padding-bottom: 0.25em;
+    margin-bottom: 1em;
+    border-bottom: 1px solid var(--font-colour);
+}
+
+header, main, footer {
+    padding: 2em 0;
+}
+
+#about-me, #contact-me {
+    margin-top: 6em;
+}
+
+.out-container {
+    width: 100%;
+    max-width: 1078px;
+    min-width: 0;
+    margin: 0 auto;
+}
+
+#content {
+    background-color: var(--background-colour);
+    padding: 0.25em;
+}
+
+.in-container {
+    width: 90%;
+    max-width: 978px;
+    margin: 0 auto;
+}
+/* END GENERAL STYLES */
+/* SECTION: HEADER */
+header > nav, header > nav > #logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header > nav > #logo > h6 {
+    font-family: var(--headline-font);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+#main-nav {
+    width: 50%;
+    text-align: center;
+    margin-top: 0.75em;
+}
+
+#main-nav > li {
+    border-bottom: 1px solid var(--font-colour);
+    padding: 0.25em 0;
+}
+
+#main-nav > li:last-of-type {
+    border: none;
+}
+
+section#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10em 0;
+    text-align: center;
+}
+
+section#hero h2 {
+    font-size: 4rem;
+    margin-bottom: 1em;
+    border: none;
+}
+
+section#hero > h3 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    line-height: 2;
+    font-family: var(--regular-font);
+    border: none;
+    margin-bottom: 2em;
+}
+
+section#hero > #SEO {
+    font-size: 1.25rem;
+
 }
 /* END SECTION */
-header,
-main,
-#my-work,
-#about-me,
-#contact-me footer {
-	padding: 1em 0;
-	position: relative;
+/* SECTION: PROJECTS */
+section#projects > .cards {
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
-/* HEADER */
-/* NAVIGATION */
-nav {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-nav > #logo {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+section#projects .card {
+    margin-top: 4em;
 }
 
-nav > #logo > h6 {
-	font-size: 1.4rem;
-	line-height: 1;
-}
-
-nav > #logo > span {
-	font-size: 0.75rem;
-}
-
-nav > #top-nav,
-footer > .container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	margin-top: 1em;
-}
-
-nav ul li:last-child {
-	display: none;
-}
-
-nav ul li a,
-nav ul li a:link,
-nav ul li a:visited {
-}
-
-nav ul li a:hover,
-nav ul li a:focus {
-	text-decoration: underline;
-}
-/* END SECTION */
-/* END SECTION */
-/* SECTION: MY WORK */
-.section-title {
-	font-size: 2rem;
-	border-bottom: 1px solid var(--font-colour);
-	margin-bottom: 1em;
-}
-
-.cards {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
-.cards .card img {
-	display: block;
-	width: 100%;
-	height: 200px;
-	border-radius: 0.75em;
-	margin-top: 3em;
-}
-
-.cards .card:first-of-type img {
-	margin-top: 0;
+section#projects .card:first-of-type {
+    margin-top: 0;
 }
 
 .card-title {
-	padding-top: 1em;
-	font-size: 1.4rem;
+    margin-top: 1em;
 }
 
 .card-description {
-	padding-top: 2em;
+    margin-top: 1em;
+    width: 80%
 }
 /* END SECTION */
-/* SECTION: ABOUT ME */
-#worked-with {
-	width: 100%;
-	text-align: center;
-	margin-top: 2em;
+#about-me .card img {
+    margin-top: 1em;
 }
 
-#worked-with i {
-	font-size: 2rem;
-	color: var(--link-colour);
-	padding: 1em;
+.my-skills {
+    margin-top: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
-/* END SECTION */
 /* SECTION: CONTACT ME */
-#contact-form > aside {
-	text-align: center;
+#contact-me #contact-message {
+    width: 100%;
+    text-align: center;
+
 }
 
-label,
-input,
-textarea {
-	display: block;
-	width: 100%;
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+label, input, textarea, button#submit {
+    /* font-family: var(--regular-font); */
+    display: block;
+    width: 80%;
+    border-radius: 0.25em;
+    resize: none;
 }
 
 label {
-	margin-top: 1em;
+    margin-top: 0.75em;
+    margin-bottom: 0.15em;
 }
 
-input,
-textarea {
-	outline: none;
-	border-radius: 0.3em;
-	border: 1px solid var(--black-colour);
-	padding: 0.5em;
+input, textarea {
+    border: 1px solid var(--font-colour);
+    font-size: 0.75rem;
+    padding: 0.5em;
 }
 
-button.submit {
-	display: block;
-	width: 100%;
-	background-color: var(--font-colour);
-	color: var(--background-colour);
-	padding: 0.75em 1.25em;
-	border: none;
-	margin-top: 1em;
-	transition: all ease-in-out 0.1s;
+button#submit {
+    background-color: var(--font-colour);
+    color: var(--background-colour);
+    padding: 0.5em 0;
+    margin-top: 0.75em;
+    transition: all ease-in-out 0.1s;
 }
 
-button.submit:hover,
-button.submit:focus {
-	background-color: #3a3a3a;
-	cursor: pointer;
+button#submit:hover {
+    background-color: var(--anchor-colour);
+    cursor: pointer;
 }
 /* END SECTION */
-/* FOOTER */
+/* SECTION: FOOTER */
 footer {
-	text-align: center;
-	padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-footer ul li a,
-footer ul li a:link,
-footer ul li a:visited {
-	color: var(--link-colour);
+footer > .media-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 0.5em;
+}
+
+footer > .media-links > li {
+    padding: 0 1em;
 }
 /* END SECTION */
-/* TABLET */
-@media screen and (min-width: 600px) {
-	/* GENERAL STYLES */
-	.container {
-		width: 90%;
-		max-width: 750px;
-	}
-	/* END SECTION */
-	/* HEADER */
-	/* NAVIGATION */
-	nav {
-		flex-direction: row;
-	}
+@media screen and (min-width: 645px) {
+    .in-container {
+        padding: 0 2em;
+    }
 
-	nav > #logo {
-		align-items: flex-start;
-	}
+    header > nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
-	nav > #top-nav {
-		flex-direction: row;
-	}
+    header > nav > #logo {
+        align-items: flex-start;
+    }
 
-	nav ul li,
-	footer ul li {
-		display: inline-block;
-		float: left;
-		margin-left: 1em;
-	}
+    #main-nav {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: row;
+        margin-top: 0;
+        flex-grow: 1;
+        margin-left: 1em;
+    }
 
-	nav ul li:last-child {
-		display: inline-block;
-	}
-	/* END SECTION */
-	/* END SECTION */
-	/* SECTION: MY WORK */
-	.cards {
-		flex-direction: row;
-	}
+    #main-nav > li {
+        border: none;
+        margin-left: 1em;
 
-	.card {
-		display: flex;
-		flex-direction: column;
-		padding: 0.5em;
-	}
-	.cards .card img {
-		margin-top: 0;
-	}
-	/* END SECTION */
-	/* SECTION: ABOUT ME */
-	#about-me .cards {
-		justify-content: center;
-		align-items: center;
-	}
-
-	#about-me .card-description {
-		padding-top: 0;
-		padding-left: 1.5em;
-	}
-	/* END SECTION */
-	/* SECTION: CONTACT ME */
-	#contact-form > aside {
-		flex-grow: 1;
-	}
-
-	#contact-form > aside {
-		flex-grow: 1;
-		text-align: left;
-	}
-
-	#contact-form {
-		display: flex;
-	}
-
-	#contact-me aside {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	}
-	/* END SECTION */
-	/* FOOTER */
-	footer > .container {
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-	}
-	/* END SECTION */
+    }
 }
-/* END TABLET */
+
+#button {
+    background-color: var(--anchor-colour);
+    color: var(--background-colour);
+    padding: 0.5em 1.25em;
+    font-weight: bold;
+    border-radius: 0.25em;
+}
+
+@media screen and (min-width: 730px) {
+    section#projects > .cards {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0.5em;
+    }
+
+    section#projects .card {
+        margin-top: 0em;
+        padding: 2em 0 ;
+    }
+
+    #contact-me > .card {
+        display: flex;
+        flex-direction: row;
+        text-align: left;
+    }
+
+    #contact-me > .card > #contact-message {
+        text-align: start;
+        padding-right: 2em;
+        flex-grow: 1;
+    }
+
+    #contact-message > h4 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    }
+
+    #contact-me > .card > form {
+        border-left: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer > .media-links {
+        margin-top: 0;
+    }
+}
