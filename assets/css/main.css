@@ -213,20 +213,10 @@ label {
     margin-bottom: 0.15em;
 }
 
-<<<<<<< HEAD
 input, textarea {
     border: 1px solid var(--font-colour);
     font-size: 0.75rem;
     padding: 0.5em;
-=======
-input,
-textarea {
-	outline: none;
-	border-radius: 0.3em;
-	border: 1px solid var(--black-colour);
-	padding: 0.5em;
-	resize: none;
->>>>>>> 77f9ae3a5ae778633ffdd346948a791d9c71efb3
 }
 
 button#submit {
