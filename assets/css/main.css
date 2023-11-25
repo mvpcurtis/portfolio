@@ -211,10 +211,17 @@ section#projects .card:first-of-type {
 #about-me .card {
 	flex-direction: row;
 }
+
 #about-me .card img {
 	margin-top: 1em;
 	border-radius: 50%;
-	padding-right: 4em;
+	padding-right: 2em;
+	margin-right: 1em;
+	width: 200px;
+	height: 200px;
+	background-position: center;
+	background-size: stretch;
+	background-repeat: no-repeat;
 }
 
 .my-skills {
@@ -361,12 +368,11 @@ footer > .media-links > li {
 	}
 
 	.timeline li {
-		padding: 2em 0 3em 1.5em;
-		border-left: 1px solid var(--font-colour);
+		padding: 2em 0.25em 2em 1.5em;
+		border-left: 2px solid var(--anchor-colour);
 		position: relative;
-		padding-left: 20px;
-		margin-left: 10px;
 	}
+
 	.timeline li::before {
 		content: "";
 		width: 15px;
@@ -378,6 +384,28 @@ footer > .media-links > li {
 		border-radius: 50%;
 		position: absolute;
 		left: -10px;
-		top: 0px;
+	}
+
+	.timeline h5 {
+		font-size: 1rem;
+		display: inline;
+	}
+
+	.timeline p {
+		font-size: 0.75rem;
+	}
+
+	.timeline .tag {
+		font-size: 0.5rem;
+		background-color: var(--font-colour);
+		color: var(--background-colour);
+		padding: 0.5em 0.75em;
+		border-radius: 0.25em;
+		margin-left: 1em;
+	}
+
+	.timeline .current {
+		background-color: var(--anchor-colour);
+		color: var(--background-colour);
 	}
 }
