@@ -13,6 +13,7 @@
 	--yellow-colour: #e9c46a;
 	--background-colour: var(--white-colour);
 	--font-colour: var(--black-colour);
+	--textarea-colour: var(--white-colour);
 	--anchor-colour: var(--blue-colour);
 	--regular-font: "Open Sans", sans-serif;
 	--headline-font: "bely-display", sans-serif;
@@ -21,6 +22,7 @@
 .dark-theme {
 	--background-colour: var(--grey-colour);
 	--font-colour: var(--white-colour);
+	--textarea-colour: var(--grey-colour);
 }
 /* END VARIABLES */
 ::selection {
@@ -154,7 +156,7 @@ header > nav > #logo > h6 {
 }
 
 #cta {
-	color: #ffffff;
+	color: var(--background-colour);
 }
 
 section#hero {
@@ -286,6 +288,7 @@ section#projects .card:first-of-type {
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	text-align: center;
 }
 
 .my-skills > ul > li {
@@ -341,12 +344,12 @@ section#projects .card:first-of-type {
 
 .timeline .current {
 	background-color: var(--anchor-colour);
-	color: var(--background-colour);
+	color: var(--white-colour);
 }
 
 .timeline .spotify {
 	background-color: #1db954;
-	color: #ffffff;
+	color: var(--white-colour);
 }
 /* SECTION: CONTACT ME */
 #contact-me #contact-message {
@@ -382,6 +385,8 @@ label {
 input,
 textarea {
 	border: 1px solid var(--font-colour);
+	background-color: var(--textarea-colour);
+	color: var(--font-colour);
 	font-size: 0.75rem;
 	padding: 0.5em;
 }
@@ -523,7 +528,7 @@ footer > .media-links > li {
 	}
 
 	#contact-me > .card > form {
-		border-left: 1px solid rgba(0, 0, 0, 0.2);
+		border-left: 1px solid var(--font-colour);
 	}
 
 	footer {
