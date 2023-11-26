@@ -18,8 +18,8 @@
 }
 /* END VARIABLES */
 ::selection {
-	color: #ffffff;
-	background-color: #da69a5;
+	color: var(--background-colour);
+	background-color: var(--red-colour);
 }
 /* RESET */
 * {
@@ -61,7 +61,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+section#about-me h4 {
 	font-family: var(--headline-font);
 }
 
@@ -155,7 +156,7 @@ section#hero {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	padding: 10em 0;
+	padding: 5em 0;
 	text-align: center;
 }
 
@@ -183,6 +184,35 @@ section#hero > #SEO {
 section#projects > .cards {
 	display: grid;
 	grid-template-columns: 1fr;
+	grid-gap: 2em;
+	grid-template-areas:
+		"portfolio"
+		"calculator"
+		"studyguide";
+}
+
+#portfolio {
+	grid-area: portfolio;
+}
+
+#portfolio > .project-image {
+	background-image: url("../images/portfolio.png");
+}
+
+#calculator {
+	grid-area: calculator;
+}
+
+#calculator > .project-image {
+	background-image: url("https://images.pexels.com/photos/4439444/pexels-photo-4439444.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+}
+
+#studyguide {
+	grid-area: studyguide;
+}
+
+#studyguide > .project-image {
+	background-image: url("https://images.pexels.com/photos/4271927/pexels-photo-4271927.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
 }
 
 .card {
@@ -205,35 +235,115 @@ section#projects .card:first-of-type {
 
 .card-description {
 	margin-top: 1em;
-	width: 80%;
 }
 /* END SECTION */
+#about-me h4 {
+	font-size: 2rem;
+	text-decoration: underline;
+}
+
 #about-me .card {
-	flex-direction: row;
+	border: 1px solid var(--font-colour);
+	padding: 1em;
 }
 
 #about-me .card img {
 	margin-top: 1em;
 	border-radius: 50%;
-	padding-right: 2em;
-	margin-right: 1em;
-	width: 200px;
-	height: 200px;
+	/* padding-right: 2em; */
+	margin-bottom: 2em;
+	width: 250px;
+	height: 250px;
+	border: 1px solid var(--font-colour);
 	background-position: center;
 	background-size: stretch;
 	background-repeat: no-repeat;
 }
 
+#about-me .card > .card-description {
+	width: 100%;
+	text-align: center;
+}
+
+.project-image {
+	width: 100%;
+	height: 200px;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	border: 1px solid var(--font-colour);
+}
+
 .my-skills {
-	margin-top: 3em;
+	margin: 5em 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+}
+
+.my-skills > ul > li {
+	display: inline-block;
+	font-size: 3rem;
+	padding: 0.25em;
+}
+
+.timeline {
+	margin-top: 2em;
+}
+
+.timeline li {
+	padding: 2em 0.25em 2em 1.5em;
+	border-left: 2px solid var(--anchor-colour);
+	position: relative;
+}
+
+.timeline li::before {
+	content: "";
+	width: 15px;
+	height: 15px;
+	background: white;
+	border: 1px solid var(--anchor-colour);
+	box-shadow: 3px 3px 0px var(--anchor-colour);
+	box-shadow: 3px 3px 0px var(--anchor-colour);
+	border-radius: 50%;
+	position: absolute;
+	left: -10px;
+}
+
+.timeline h5 {
+	font-size: 1rem;
+	display: inline;
+}
+
+.timeline p {
+	font-size: 0.75rem;
+	padding-top: 0.5em;
+}
+
+.timeline .tag {
+	font-size: 0.5rem;
+	background-color: var(--font-colour);
+	color: var(--background-colour);
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	margin-left: 1em;
+}
+
+.timeline .current {
+	background-color: var(--anchor-colour);
+	color: var(--background-colour);
+}
+
+.timeline .spotify {
+	background-color: #1db954;
+	color: #ffffff;
 }
 /* SECTION: CONTACT ME */
 #contact-me #contact-message {
 	width: 100%;
 	text-align: center;
+	padding: 2em 0;
 }
 
 form {
@@ -290,6 +400,7 @@ footer > .media-links > li {
 	padding: 0 1em;
 }
 /* END SECTION */
+/* TABLET VIEW */
 @media screen and (min-width: 645px) {
 	section h2 {
 		font-size: 2rem;
@@ -323,28 +434,77 @@ footer > .media-links > li {
 		border: none;
 		margin-left: 1em;
 	}
-}
 
+	section#hero {
+		padding: 10em 0;
+	}
+
+	.card-description {
+		width: 80%;
+	}
+
+	.my-skills > ul > li {
+		padding: 0.5em;
+	}
+}
+/* END TABLET VIEW */
+/* DESKTOP VIEW */
 @media screen and (min-width: 730px) {
+	/* SCROLLING STICKY NAV */
+	/* header {
+		position: relative;
+	}
+	header > nav {
+		position: fixed;
+		width: 80%;
+		max-width: 899px;
+	}
+
+	nav.sticky {
+		top: 0.25em;
+		background-color: black;
+		color: var(--background-colour);
+		padding: 1em 1.5em;
+		border-radius: 0.25em;
+	} */
 	section#projects > .cards {
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 0.5em;
+		grid-template-areas:
+			"portfolio portfolio"
+			"calculator studyguide";
 	}
 
 	section#projects .card {
 		margin-top: 0em;
-		padding: 2em 0;
 	}
 
-	#contact-me > .card {
+	#portfolio > .project-image {
+		width: 100%;
+		height: 400px;
+	}
+
+	.my-skills > ul > li {
+		padding: 1em;
+	}
+
+	#contact-me > .card,
+	#about-me > .card {
 		display: flex;
 		flex-direction: row;
 		text-align: left;
 	}
 
-	#contact-me > .card > #contact-message {
+	#about-me .card img {
+		margin: 0 3em 0 0;
+	}
+
+	#about-me .card > .card-description {
+		text-align: left;
+	}
+
+	#contact-me #contact-message {
 		text-align: start;
-		padding-right: 2em;
+		padding: 0 2em 0 0;
 		flex-grow: 1;
 	}
 
@@ -366,46 +526,5 @@ footer > .media-links > li {
 	footer > .media-links {
 		margin-top: 0;
 	}
-
-	.timeline li {
-		padding: 2em 0.25em 2em 1.5em;
-		border-left: 2px solid var(--anchor-colour);
-		position: relative;
-	}
-
-	.timeline li::before {
-		content: "";
-		width: 15px;
-		height: 15px;
-		background: white;
-		border: 1px solid var(--anchor-colour);
-		box-shadow: 3px 3px 0px var(--anchor-colour);
-		box-shadow: 3px 3px 0px var(--anchor-colour);
-		border-radius: 50%;
-		position: absolute;
-		left: -10px;
-	}
-
-	.timeline h5 {
-		font-size: 1rem;
-		display: inline;
-	}
-
-	.timeline p {
-		font-size: 0.75rem;
-	}
-
-	.timeline .tag {
-		font-size: 0.5rem;
-		background-color: var(--font-colour);
-		color: var(--background-colour);
-		padding: 0.5em 0.75em;
-		border-radius: 0.25em;
-		margin-left: 1em;
-	}
-
-	.timeline .current {
-		background-color: var(--anchor-colour);
-		color: var(--background-colour);
-	}
 }
+/* END DESKTOP VIEW */
