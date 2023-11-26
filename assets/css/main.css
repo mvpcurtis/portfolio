@@ -321,13 +321,16 @@ section#projects .card:first-of-type {
 	padding-top: 0.5em;
 }
 
+.timeline .tags {
+	margin-top: 0.5em;
+}
+
 .timeline .tag {
 	font-size: 0.5rem;
 	background-color: var(--font-colour);
 	color: var(--background-colour);
-	padding: 0.5em 0.75em;
+	padding: 0.75em 1em;
 	border-radius: 0.25em;
-	margin-left: 1em;
 }
 
 .timeline .current {
