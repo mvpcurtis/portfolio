@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-GB">
 	<!-- HEAD -->
 	<head>
 		<!-- META DATA -->
@@ -9,6 +9,8 @@
 		<title>Curtis | Portfolio</title>
 		<!-- STYLESHEETS -->
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- FONT AWESOME -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	</head>
 	<!-- BODY -->
 	<body>
@@ -28,9 +30,9 @@
 							</div>
 							<!-- NAVIGATION LINKS -->
 							<ul id="main-nav">
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#about-me">About Me</a></li>
-								<li><a class="button" id="cta" href="#contact-me">Contact Me</a></li>
+								<li><a href="#projects" alt="Projects">Projects</a></li>
+								<li><a href="#about-me" alt="About Me">About Me</a></li>
+								<li><a class="button" id="cta" href="#contact-me" alt="Contact Me">Contact Me</a></li>
 								<!-- <li><a href="#toggle">Dark Mode</a></li> -->
 							</ul>
 						</nav>
@@ -49,40 +51,32 @@
 							<!-- CARDS -->
 							<div class="cards">
 								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
+								<div class="card" id="portfolio">
+									<div class="project-image"></div>
+									<h3 class="card-title">My Personal Portfolio</h3>
+									<p class="card-description">This project is my very own personal portfolio (the site you're currently viewing). This was designed and developed to show you my recent and hottest pieces of work. &#128293;</p>
 								</div>
 								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
+								<div class="card" id="calculator">
+									<div class="project-image"></div>
+									<h3 class="card-title">JavaScript Calculator</h3>
+									<p class="card-description">
+										This project will contain the calculator application that I built from scratch using the lastest technologies within the frontend world.
+										<br />
+										<br />
+										<strong>Credit: Image supplied by Vie Studio @ Pexels.</strong>
+									</p>
 								</div>
 								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
-								</div>
-								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
-								</div>
-								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
-								</div>
-								<!-- CARD -->
-								<div class="card">
-									<img src="https://placeholder.co/300x200" alt="placeholder" />
-									<h3 class="card-title">Project Title</h3>
-									<p class="card-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis facilis tempora asperiores officiis alias provident, esse explicabo corrupti, amet obcaecati libero a voluptas ipsa? Natus rerum quibusdam nam tenetur ipsam.</p>
+								<div class="card" id="studyguide">
+									<div class="project-image"></div>
+									<h3 class="card-title">Future Project</h3>
+									<p class="card-description">
+										This will contain a project that will be built in the future.
+										<br />
+										<br />
+										<strong>Credit: Image supplied by alleksana @ Pexels.</strong>
+									</p>
 								</div>
 							</div>
 						</section>
@@ -92,28 +86,39 @@
 							<h2>About Me</h2>
 							<!-- CARD -->
 							<div class="card">
-								<img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=3544&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Picture of myself" />
-								<p class="card-description">Where to start really... I'm a 27 year old who currently recides in the UK. I developed a deep passion for coding along time ago when I received my first PC as a child. Due to life, I was unable to pursue a career in something I care genuinly care about and found myself a job working in a factory. It hasn't been all bad. Due to that job, I was able to support myself and then come back to the thing I enjoy.</p>
+								<img src="assets/images/myself.JPG" />
+								<p class="card-description">Where to start really... I'm a 27 year old male from the UK. I developed a deep passion for coding along time ago which then branched off into web development. Creating a beautiful frontend experience for the end-user genuinly really excites me! I still have a lot to learn which drives this desire to learn within me.</p>
 							</div>
 							<!-- MY SKILLS -->
 							<div class="my-skills">
 								<h4>Some of my skills</h4>
+								<ul>
+									<li><i class="fa-brands fa-html5" alt="html5"></i></li>
+									<li><i class="fa-brands fa-css3-alt" alt="css3"></i></li>
+									<li><i class="fa-brands fa-sass" alt="sass"></i></li>
+									<li><i class="fa-brands fa-js" alt="javascript"></i></li>
+								</ul>
 							</div>
+							<!-- TIMELINE -->
 							<article id="my-reads">
-								<h4>Checkout some of my reads</h4>
+								<h4>My Reads:</h4>
 								<ul class="timeline">
 									<li>
-										<h5>Colt Steele - Complete Web Developer Bootcamp</h5>
+										<h5><a href="https://www.udemy.com/course/the-web-developer-bootcamp/" alt="Udemy course link">Colt Steele - Complete Web Developer Bootcamp</a></h5>
 										<sup class="tag">Recommend</sup>
-										<sup class="tag current">Current</sup>
-										<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, impedit!</p>
+										<sup class="tag current" alt="Currently reading tag">Current</sup>
+										<p>This video course is an amazing introduction into the web development world. This bootcamp cover a number of technologies from the basics like HTML to more advanced technologies such as NodeJS.</p>
 									</li>
 									<li>
-										<h5>Colt Steele - Complete Git & GitHub bootcamp</h5>
-										<sup class="tag">Recommend</sup>
-										<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi, impedit!</p>
+										<h5><a href="https://www.udemy.com/course/git-and-github-bootcamp/" alt="Udemy couse link">Colt Steele - Complete Git & GitHub bootcamp</a></h5>
+										<sup class="tag" alt="Recommended tag">Recommend</sup>
+										<p>This bootcamp dives deep into the use of Git and GitHub. This is another amazing course provided by the highly rated Mr. Colt Steele.</p>
 									</li>
-									<li>My Playlist</li>
+									<li>
+										<h5>Want to know what I listen to?</h5>
+										<sup class="tag spotify" alt="Music tag">Spotify</sup>
+										<p>Check out my <a href="https://open.spotify.com/playlist/33A0ePQSqJ7ACZVnj7U7jo?si=ed6755a96af4474b" alt="My Spotify playlist">Spotify playlist.</a></p>
+									</li>
 								</ul>
 							</article>
 						</section>
@@ -134,8 +139,8 @@
 									<label for="email">Enter your email:</label>
 									<input type="email" name="email" id="email" placeholder="severus.snape@hogwarts.com" />
 									<label for="message">How can I help?:</label>
-									<textarea name="message" id="message" cols="30" rows="10" placeholder="Harry Potter is becoming a nuisance!"></textarea>
-									<button class="button" id="submit">Submit</button>
+									<textarea name="message" id="message" cols="30" rows="10" maxlengh="5000" placeholder="Harry Potter is becoming a nuisance!"></textarea>
+									<button class="button" id="submit" alt="submit">Submit</button>
 								</form>
 							</div>
 						</section>
@@ -146,14 +151,15 @@
 						<span id="copyright">&copy; Copyright 2023</span>
 						<!-- SOCIAL MEDIA LINKS -->
 						<ul class="media-links">
-							<li><a href="#">GitHub</a></li>
-							<li><a href="#">LinkedIn</a></li>
-							<li><a href="#">YouTube</a></li>
-							<li><a href="#">X</a></li>
+							<li><a href="https://github.com/mvpcurtis" alt="GitHub" target="_blank">GitHub</a></li>
+							<li><a href="https://linkedin.com/in/curtisbowen/" alt="LinkedIn" target="_blank">LinkedIn</a></li>
+							<li><a href="https://youtube.com/user/autumnmade" alt="YouTube" target="_blank">YouTube</a></li>
+							<li><a href="https://twitter.com/mvpcurt" alt="X" target="_blank">X</a></li>
 						</ul>
 					</footer>
 				</div>
 			</div>
 		</div>
+		<script src="assets/js/script.js"></script>
 	</body>
 </html>
