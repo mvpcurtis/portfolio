@@ -134,7 +134,18 @@ header > nav > #logo {
 	align-items: center;
 }
 
-header > nav > #logo > h6 {
+header > nav > #logo > a,
+header > nav > #logo > a:link,
+header > nav > #logo > a:visited {
+	color: var(--font-colour);
+}
+
+header > nav > #logo > a:hover,
+header > nav > #logo > a:focus {
+	text-decoration: none;
+}
+
+header > nav > #logo > a > h6 {
 	font-family: var(--headline-font);
 	font-size: 2rem;
 	line-height: 1;
