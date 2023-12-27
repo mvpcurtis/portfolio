@@ -5,7 +5,9 @@
 /* VARIABLES */
 :root {
 	--white-colour: #ffffff;
+	--trans-white-colour: rgba(255, 255, 255, 0.2);
 	--black-colour: #000000;
+	--trans-black-colour: rgba(0, 0, 0, 0.2);
 	--grey-colour: #171717;
 	--grey-colour2: rgb(33, 33, 33);
 	--blue-colour: #69b6da;
@@ -17,12 +19,15 @@
 	--anchor-colour: var(--blue-colour);
 	--regular-font: "Open Sans", sans-serif;
 	--headline-font: "bely-display", sans-serif;
+	--blur-background-colour: var(--trans-white-colour);
+	--blur-font-colour: var(--trans-black-colour);
 }
 
 .dark-theme {
 	--background-colour: var(--grey-colour);
 	--font-colour: var(--white-colour);
 	--textarea-colour: var(--grey-colour);
+	--blur-background-colour: var(--trans-black-colour);
 }
 /* END VARIABLES */
 ::selection {
@@ -91,6 +96,10 @@ footer {
 	margin-top: 6em;
 }
 
+svg {
+	fill: var(--font-colour);
+}
+
 .out-container {
 	width: 100%;
 	max-width: 1078px;
@@ -101,6 +110,7 @@ footer {
 #content {
 	background-color: var(--background-colour);
 	padding: 0.25em;
+	position: relative;
 }
 
 .in-container {
@@ -134,7 +144,18 @@ header > nav > #logo {
 	align-items: center;
 }
 
-header > nav > #logo > h6 {
+header > nav > #logo > a,
+header > nav > #logo > a:link,
+header > nav > #logo > a:visited {
+	color: var(--font-colour);
+}
+
+header > nav > #logo > a:hover,
+header > nav > #logo > a:focus {
+	text-decoration: none;
+}
+
+header > nav > #logo > a > h6 {
 	font-family: var(--headline-font);
 	font-size: 2rem;
 	line-height: 1;
@@ -153,6 +174,39 @@ header > nav > #logo > h6 {
 
 #main-nav > li:last-of-type {
 	border: none;
+}
+
+#mobile-nav {
+	position: fixed;
+	top: 0;
+	right: 0;
+	padding: 0;
+	height: 100vh;
+	width: 300px;
+	background-color: var(--blur-background-colour);
+	color: var(--font-colour);
+	backdrop-filter: blur(10px);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	display: none;
+}
+
+#mobile-nav li, #mobile-nav li a:link, #mobile-nav li a:visited {
+	display: block;
+	text-align: center;
+	width: 100%;
+}
+
+#mobile-nav a:link, #mobile-nav a:visited {
+	padding: 1em 0;
+	color: var(--font-colour);
+}
+
+#mobile-nav li a:hover, #mobile-nav ul li a:focus {
+	background-color: var(--anchor-colour);
+	text-decoration: none;
 }
 
 #cta {
