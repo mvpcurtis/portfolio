@@ -1,0 +1,129 @@
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+// variables
+// hero section variables
+$dark-bg: #232946;
+$dark-headline: #fffffe;
+$dark-paragraph: #b8c1ec;
+$dark-button: #eebbc3;
+$dark-button-text: $dark-bg;
+
+// main content variables
+$dark-main-bg: #d4d8f0;
+$dark-main-paragraph: $dark-bg;
+$dark-main-headline: $dark-bg;
+
+$dark-contact-bg: #eebbc3;
+$dark-contact-paragraph: $dark-bg;
+$dark-contact-headline: $dark-bg;
+
+// general styles
+::placeholder {
+  color: $dark-contact-paragraph;
+  opacity: 1;
+}
+
+body {
+  font-size: 1rem;
+  background-color: $dark-bg;
+  color: $dark-paragraph;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  line-height: 1.2;
+  color: $dark-headline;
+}
+
+section#hero,
+section#my-work,
+section#about-me,
+section#contact-me {
+  padding: 8rem;
+}
+
+// section: hero
+section#hero {
+  h1 {
+    font-family: inherit;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    color: $dark-paragraph;
+    margin-top: 1.5rem;
+  }
+
+  h2 {
+    font-size: 4rem;
+  }
+
+  h3 {
+    font-family: inherit;
+    letter-spacing: 0.1em;
+  }
+
+  .row {
+    max-width: calc(100vw - 60%);
+    padding: 3rem;
+    border-top: 1px solid $dark-paragraph;
+    border-bottom: 1px solid $dark-paragraph;
+  }
+}
+
+section#my-work {
+  background-color: $dark-main-bg;
+  color: $dark-main-paragraph;
+
+  h1,
+  h2,
+  h3 {
+    color: $dark-main-headline;
+  }
+}
+
+section#about-me {
+}
+
+section#contact-me {
+  background-color: $dark-contact-bg;
+  color: $dark-contact-paragraph;
+
+  h1,
+  h2,
+  h3 {
+    color: $dark-main-headline;
+  }
+
+  label {
+    margin-bottom: 0.25rem;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    background-color: $dark-headline;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    resize: none;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    background-color: $dark-contact-paragraph;
+    color: $dark-headline;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 0.2em;
+    padding: 1rem 3rem;
+  }
+}
+
+footer {
+}
