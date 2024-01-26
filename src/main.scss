@@ -48,6 +48,27 @@ section#contact-me {
   padding: 8rem;
 }
 
+button,
+.a-button {
+  background-color: $dark-contact-paragraph;
+  text-align: center;
+  text-decoration: none;
+  color: $dark-headline;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  padding: 1rem 3rem;
+  transition: all ease 0.1s;
+}
+
+button:hover,
+button:focus,
+.a-button:hover,
+.a-button:focus {
+  background-color: $dark-paragraph;
+}
+
 // section: hero
 section#hero {
   h1 {
@@ -85,10 +106,17 @@ section#my-work {
     color: $dark-main-headline;
   }
 
+  a:hover,
+  a:focus .nav-link:hover,
+  .nav-link:focus {
+    cursor: pointer !important;
+  }
+
   .card {
     border: 1px solid $dark-contact-paragraph;
     border-radius: 0.25em;
     background-color: transparent !important;
+    overflow: hidden;
   }
 
   .card .card-head {
@@ -99,10 +127,39 @@ section#my-work {
     background-repeat: no-repeat;
     background-size: cover;
   }
+
+  .card #flight-flamingo {
+    background-image: url(/src/assets/images/flightflamingo.png);
+  }
+
+  .card .card-body {
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  button,
+  .a-button {
+    display: inline-block;
+    width: 100%;
+    margin-top: 0.5em;
+    // background-color: transparent;
+    // border: 3px solid $dark-bg;
+    // color: $dark-bg;
+  }
+
+  .a-button:hover,
+  .a-button:focus {
+    background-color: $dark-button;
+    color: $dark-bg;
+  }
 }
 
 section#about-me {
   position: relative;
+
+  div.row {
+    margin-top: 5rem;
+  }
   .around-border {
     width: 400px;
     height: 400px;
@@ -114,6 +171,20 @@ section#about-me {
     position: relative;
   }
 
+  .around-border::before {
+    content: '';
+    position: absolute;
+    top: -260px;
+    left: 450px;
+    background-image: url('/src/assets/images/arrow.png');
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 300px;
+    height: 580px;
+    transform: scaleX(-1) rotate(20deg);
+  }
+
   #myself {
     width: 370px;
     height: 370px;
@@ -122,6 +193,7 @@ section#about-me {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 0.25em;
+    z-index: 1;
   }
 }
 
@@ -149,16 +221,6 @@ section#contact-me {
     resize: none;
     padding: 0.75rem;
     margin-bottom: 1.5rem;
-  }
-
-  button {
-    background-color: $dark-contact-paragraph;
-    color: $dark-headline;
-    font-weight: bold;
-    outline: none;
-    border: none;
-    border-radius: 0.2em;
-    padding: 1rem 3rem;
   }
 }
 

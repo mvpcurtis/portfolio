@@ -11890,6 +11890,27 @@ section#contact-me {
   padding: 8rem;
 }
 
+button,
+.a-button {
+  background-color: #232946;
+  text-align: center;
+  text-decoration: none;
+  color: #fffffe;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  border-radius: 0.2em;
+  padding: 1rem 3rem;
+  transition: all ease 0.1s;
+}
+
+button:hover,
+button:focus,
+.a-button:hover,
+.a-button:focus {
+  background-color: #b8c1ec;
+}
+
 section#hero h1, section#hero .h1 {
   font-family: inherit;
   font-size: 0.75rem;
@@ -11922,10 +11943,16 @@ section#my-work h3,
 section#my-work .h3 {
   color: #232946;
 }
+section#my-work a:hover,
+section#my-work a:focus .nav-link:hover,
+section#my-work .nav-link:focus {
+  cursor: pointer !important;
+}
 section#my-work .card {
   border: 1px solid #232946;
   border-radius: 0.25em;
   background-color: transparent !important;
+  overflow: hidden;
 }
 section#my-work .card .card-head {
   width: 100%;
@@ -11935,9 +11962,30 @@ section#my-work .card .card-head {
   background-repeat: no-repeat;
   background-size: cover;
 }
+section#my-work .card #flight-flamingo {
+  background-image: url(/src/assets/images/flightflamingo.png);
+}
+section#my-work .card .card-body {
+  overflow: hidden;
+  z-index: 1;
+}
+section#my-work button,
+section#my-work .a-button {
+  display: inline-block;
+  width: 100%;
+  margin-top: 0.5em;
+}
+section#my-work .a-button:hover,
+section#my-work .a-button:focus {
+  background-color: #eebbc3;
+  color: #232946;
+}
 
 section#about-me {
   position: relative;
+}
+section#about-me div.row {
+  margin-top: 5rem;
 }
 section#about-me .around-border {
   width: 400px;
@@ -11949,6 +11997,19 @@ section#about-me .around-border {
   align-items: center;
   position: relative;
 }
+section#about-me .around-border::before {
+  content: "";
+  position: absolute;
+  top: -260px;
+  left: 450px;
+  background-image: url("/src/assets/images/arrow.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 300px;
+  height: 580px;
+  transform: scaleX(-1) rotate(20deg);
+}
 section#about-me #myself {
   width: 370px;
   height: 370px;
@@ -11957,6 +12018,7 @@ section#about-me #myself {
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 0.25em;
+  z-index: 1;
 }
 
 section#contact-me {
@@ -11983,15 +12045,6 @@ section#contact-me textarea {
   resize: none;
   padding: 0.75rem;
   margin-bottom: 1.5rem;
-}
-section#contact-me button {
-  background-color: #232946;
-  color: #fffffe;
-  font-weight: bold;
-  outline: none;
-  border: none;
-  border-radius: 0.2em;
-  padding: 1rem 3rem;
 }
 
 footer {
