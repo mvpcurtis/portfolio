@@ -5,12 +5,12 @@ function Navigation(props) {
         <div className="container flex items-center justify-between">
           <span id="logo">
             <a className="font-bold" href="#">
-              bowen.xyz
+              Curtis<span>.xyz</span>
             </a>
           </span>
           <ul className="navigation-links flex items-center justify-center">
             <li>
-              <a className="underline underline-offset-8" href="#">
+              <a className="active" href="#">
                 My Work
               </a>
             </li>
