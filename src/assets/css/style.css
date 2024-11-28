@@ -17,7 +17,8 @@ html {
 }
 
 :root {
-  --contrast-colour: #ff7f00;
+  /* Accent colours */
+  --accent-1: #ff7f00;
 }
 
 body {
@@ -44,7 +45,7 @@ nav ul li a:link {
 }
 
 nav ul li a.active {
-  color: var(--contrast-colour);
+  color: var(--accent-1);
   font-weight: bold;
   text-decoration: underline;
   text-underline-offset: 8px;
@@ -52,10 +53,10 @@ nav ul li a.active {
 
 nav ul li a:hover,
 nav ul li a:focus {
-  color: var(--contrast-colour);
-  border-color: var(--contrast-colour);
+  color: var(--accent-1);
+  border-color: var(--accent-1);
 }
 
 nav #logo a span {
-  color: var(--contrast-colour);
+  color: var(--accent-1);
 }
